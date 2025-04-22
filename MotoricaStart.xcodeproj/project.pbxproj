@@ -136,7 +136,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F02DE3222F8507500E40C3A /* ExampleMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F02DE3222F8507500E40C3A /* MotoricaStartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotoricaStartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F02DE3422F8507500E40C3A /* MoviesSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSceneUITests.swift; sourceTree = "<group>"; };
 		1F02DE3622F8507500E40C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F05A6CB2220A2CB001E2801 /* SearchMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesUseCase.swift; sourceTree = "<group>"; };
@@ -173,12 +173,12 @@
 		1F9035392307716300DEA4BD /* MoviesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModelTests.swift; sourceTree = "<group>"; };
 		1F9035402307758D00DEA4BD /* PosterImagesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImagesRepositoryMock.swift; sourceTree = "<group>"; };
 		1FA2048F242F528E000C4B56 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		1FA53389201E1FDE00747E55 /* ExampleMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA53389201E1FDE00747E55 /* MotoricaStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotoricaStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA5338C201E1FDE00747E55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA53393201E1FDE00747E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FA53396201E1FDE00747E55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA53398201E1FDE00747E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FA5339D201E1FDE00747E55 /* ExampleMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA5339D201E1FDE00747E55 /* MotoricaStartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotoricaStartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA533B1201EE2A500747E55 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		1FA533D6201EF2B500747E55 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		1FA533E1201EF5F700747E55 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
@@ -256,13 +256,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F02DE3322F8507500E40C3A /* ExampleMVVMUITests */ = {
+		1F02DE3322F8507500E40C3A /* MotoricaStartUITests */ = {
 			isa = PBXGroup;
 			children = (
 				1F02DE3D22F876B500E40C3A /* Presentation */,
 				1F02DE3622F8507500E40C3A /* Info.plist */,
 			);
-			path = ExampleMVVMUITests;
+			path = MotoricaStartUITests;
 			sourceTree = "<group>";
 		};
 		1F02DE3D22F876B500E40C3A /* Presentation */ = {
@@ -455,9 +455,9 @@
 		1FA53380201E1FDE00747E55 = {
 			isa = PBXGroup;
 			children = (
-				1FA5338B201E1FDE00747E55 /* ExampleMVVM */,
-				1FA533A0201E1FDE00747E55 /* ExampleMVVMTests */,
-				1F02DE3322F8507500E40C3A /* ExampleMVVMUITests */,
+				1FA5338B201E1FDE00747E55 /* MotoricaStart */,
+				1FA533A0201E1FDE00747E55 /* MotoricaStartTests */,
+				1F02DE3322F8507500E40C3A /* MotoricaStartUITests */,
 				1FA5338A201E1FDE00747E55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -465,14 +465,14 @@
 		1FA5338A201E1FDE00747E55 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FA53389201E1FDE00747E55 /* ExampleMVVM.app */,
-				1FA5339D201E1FDE00747E55 /* ExampleMVVMTests.xctest */,
-				1F02DE3222F8507500E40C3A /* ExampleMVVMUITests.xctest */,
+				1FA53389201E1FDE00747E55 /* MotoricaStart.app */,
+				1FA5339D201E1FDE00747E55 /* MotoricaStartTests.xctest */,
+				1F02DE3222F8507500E40C3A /* MotoricaStartUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1FA5338B201E1FDE00747E55 /* ExampleMVVM */ = {
+		1FA5338B201E1FDE00747E55 /* MotoricaStart */ = {
 			isa = PBXGroup;
 			children = (
 				1FA533D5201EF29600747E55 /* Application */,
@@ -483,10 +483,10 @@
 				1FEED0D520231F72000F4EAA /* Common */,
 				1FA533AD201E205000747E55 /* Resources */,
 			);
-			path = ExampleMVVM;
+			path = MotoricaStart;
 			sourceTree = "<group>";
 		};
-		1FA533A0201E1FDE00747E55 /* ExampleMVVMTests */ = {
+		1FA533A0201E1FDE00747E55 /* MotoricaStartTests */ = {
 			isa = PBXGroup;
 			children = (
 				1FA53A3622F45C4F009A104C /* Domain */,
@@ -496,8 +496,7 @@
 				1F7C1D1A242117D30014F011 /* Mocks */,
 				1FFFC83D221B02BA007D99D2 /* Info.plist */,
 			);
-			name = ExampleMVVMTests;
-			path = ExampleMVVM;
+			path = MotoricaStartTests;
 			sourceTree = "<group>";
 		};
 		1FA533AD201E205000747E55 /* Resources */ = {
@@ -863,9 +862,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1F02DE3122F8507500E40C3A /* ExampleMVVMUITests */ = {
+		1F02DE3122F8507500E40C3A /* MotoricaStartUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F02DE3922F8507500E40C3A /* Build configuration list for PBXNativeTarget "ExampleMVVMUITests" */;
+			buildConfigurationList = 1F02DE3922F8507500E40C3A /* Build configuration list for PBXNativeTarget "MotoricaStartUITests" */;
 			buildPhases = (
 				1F02DE2E22F8507500E40C3A /* Sources */,
 				1F02DE2F22F8507500E40C3A /* Frameworks */,
@@ -876,14 +875,14 @@
 			dependencies = (
 				1F02DE3822F8507500E40C3A /* PBXTargetDependency */,
 			);
-			name = ExampleMVVMUITests;
+			name = MotoricaStartUITests;
 			productName = ExampleMVVMUITests;
-			productReference = 1F02DE3222F8507500E40C3A /* ExampleMVVMUITests.xctest */;
+			productReference = 1F02DE3222F8507500E40C3A /* MotoricaStartUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1FA53388201E1FDE00747E55 /* ExampleMVVM */ = {
+		1FA53388201E1FDE00747E55 /* MotoricaStart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FA533A6201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "ExampleMVVM" */;
+			buildConfigurationList = 1FA533A6201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "MotoricaStart" */;
 			buildPhases = (
 				1FA53385201E1FDE00747E55 /* Sources */,
 				1FA53386201E1FDE00747E55 /* Frameworks */,
@@ -893,14 +892,14 @@
 			);
 			dependencies = (
 			);
-			name = ExampleMVVM;
+			name = MotoricaStart;
 			productName = CodeChallenge;
-			productReference = 1FA53389201E1FDE00747E55 /* ExampleMVVM.app */;
+			productReference = 1FA53389201E1FDE00747E55 /* MotoricaStart.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1FA5339C201E1FDE00747E55 /* ExampleMVVMTests */ = {
+		1FA5339C201E1FDE00747E55 /* MotoricaStartTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FA533A9201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "ExampleMVVMTests" */;
+			buildConfigurationList = 1FA533A9201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "MotoricaStartTests" */;
 			buildPhases = (
 				1FA53399201E1FDE00747E55 /* Sources */,
 				1FA5339A201E1FDE00747E55 /* Frameworks */,
@@ -911,9 +910,9 @@
 			dependencies = (
 				1FA5339F201E1FDE00747E55 /* PBXTargetDependency */,
 			);
-			name = ExampleMVVMTests;
+			name = MotoricaStartTests;
 			productName = CodeChallengeTests;
-			productReference = 1FA5339D201E1FDE00747E55 /* ExampleMVVMTests.xctest */;
+			productReference = 1FA5339D201E1FDE00747E55 /* MotoricaStartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -939,6 +938,7 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 1FA53388201E1FDE00747E55;
 					};
 				};
 			};
@@ -956,9 +956,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1FA53388201E1FDE00747E55 /* ExampleMVVM */,
-				1FA5339C201E1FDE00747E55 /* ExampleMVVMTests */,
-				1F02DE3122F8507500E40C3A /* ExampleMVVMUITests */,
+				1FA53388201E1FDE00747E55 /* MotoricaStart */,
+				1FA5339C201E1FDE00747E55 /* MotoricaStartTests */,
+				1F02DE3122F8507500E40C3A /* MotoricaStartUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1123,12 +1123,12 @@
 /* Begin PBXTargetDependency section */
 		1F02DE3822F8507500E40C3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1FA53388201E1FDE00747E55 /* ExampleMVVM */;
+			target = 1FA53388201E1FDE00747E55 /* MotoricaStart */;
 			targetProxy = 1F02DE3722F8507500E40C3A /* PBXContainerItemProxy */;
 		};
 		1FA5339F201E1FDE00747E55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1FA53388201E1FDE00747E55 /* ExampleMVVM */;
+			target = 1FA53388201E1FDE00747E55 /* MotoricaStart */;
 			targetProxy = 1FA5339E201E1FDE00747E55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1330,7 +1330,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = motorica.start;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motorica.start;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1355,7 +1355,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = motorica.start;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motorica.start;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1379,6 +1379,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotoricaStart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MotoricaStart";
 			};
 			name = Debug;
 		};
@@ -1397,13 +1398,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotoricaStart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MotoricaStart";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F02DE3922F8507500E40C3A /* Build configuration list for PBXNativeTarget "ExampleMVVMUITests" */ = {
+		1F02DE3922F8507500E40C3A /* Build configuration list for PBXNativeTarget "MotoricaStartUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F02DE3A22F8507500E40C3A /* Debug */,
@@ -1421,7 +1423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		1FA533A6201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "ExampleMVVM" */ = {
+		1FA533A6201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "MotoricaStart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FA533A7201E1FDE00747E55 /* Debug */,
@@ -1430,7 +1432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		1FA533A9201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "ExampleMVVMTests" */ = {
+		1FA533A9201E1FDE00747E55 /* Build configuration list for PBXNativeTarget "MotoricaStartTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FA533AA201E1FDE00747E55 /* Debug */,
