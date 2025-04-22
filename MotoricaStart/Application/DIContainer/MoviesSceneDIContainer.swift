@@ -14,6 +14,7 @@ final class MoviesSceneDIContainer: MoviesSearchFlowCoordinatorDependencies {
     lazy var moviesQueriesStorage: MoviesQueriesStorage = CoreDataMoviesQueriesStorage(maxStorageLimit: 10)
     lazy var moviesResponseCache: MoviesResponseStorage = CoreDataMoviesResponseStorage()
 
+
     init(dependencies: Dependencies) {
         self.dependencies = dependencies        
     }

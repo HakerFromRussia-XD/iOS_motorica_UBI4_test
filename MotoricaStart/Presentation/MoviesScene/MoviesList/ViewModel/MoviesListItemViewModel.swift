@@ -7,6 +7,7 @@ struct MoviesListItemViewModel: Equatable {
     let overview: String
     let releaseDate: String
     let posterImagePath: String?
+    let isAd: Bool
 }
 
 extension MoviesListItemViewModel {
@@ -14,6 +15,7 @@ extension MoviesListItemViewModel {
         self.title = movie.title ?? ""
         self.posterImagePath = movie.posterPath
         self.overview = movie.overview ?? ""
+        self.isAd = movie.isAd
         if let releaseDate = movie.releaseDate {
             self.releaseDate = "\(NSLocalizedString("Release Date", comment: "")): \(dateFormatter.string(from: releaseDate))"
         } else {

@@ -13,13 +13,11 @@ final class MoviesListViewController: UIViewController, StoryboardInstantiable, 
 
     private var moviesTableViewController: MoviesListTableViewController?
     private var searchController = UISearchController(searchResultsController: nil)
+    let storage = CoreDataMoviesResponseStorage() 
 
     // MARK: - Lifecycle
 
-    static func create(
-        with viewModel: MoviesListViewModel,
-        posterImagesRepository: PosterImagesRepository?
-    ) -> MoviesListViewController {
+    static func create(with viewModel: MoviesListViewModel,posterImagesRepository: PosterImagesRepository?) -> MoviesListViewController {
         let view = MoviesListViewController.instantiateViewController()
         view.viewModel = viewModel
         view.posterImagesRepository = posterImagesRepository
@@ -32,6 +30,40 @@ final class MoviesListViewController: UIViewController, StoryboardInstantiable, 
         setupBehaviours()
         bind(to: viewModel)
         viewModel.viewDidLoad()
+        
+        let mockResponseDTO = MoviesResponseDTO(
+            page: 2,
+            totalPages: 5,
+            movies: [
+                MoviesResponseDTO.MovieDTO(
+                    id: 1,
+                    title: "Пример виджета 2",
+                    genre: .adventure,
+                    posterPath: "/path/to/poster.jpg",
+                    overview: "Описание виджета 1...",
+                    releaseDate: "2023-10-01"
+                ),
+                MoviesResponseDTO.MovieDTO(
+                    id: 2,
+                    title: "isAd: true 1",
+                    genre: .adventure,
+                    posterPath: "/path/to/poster.jpg",
+                    overview: "Описание виджета 2...",
+                    releaseDate: "2023-10-01",
+                    isAd: true
+                ),
+                MoviesResponseDTO.MovieDTO(
+                    id: 3,
+                    title: "Пример виджета 3",
+                    genre: .adventure,
+                    posterPath: "/path/to/poster.jpg",
+                    overview: "Описание виджета 3...",
+                    releaseDate: "2023-10-01"
+                )
+            ]
+        )
+        let requestDTO = MoviesRequestDTO(query: MovieQuery(query: "My request").query, page: 1)
+        storage.save(response: mockResponseDTO, for: requestDTO)
         viewModel.didSearch(query: "My request")
     }
 

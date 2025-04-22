@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGq-gd-62K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGq-gd-62K">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Movies List View Controller-->
         <scene sceneID="0BI-7x-XJo">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="cGq-gd-62K" customClass="MoviesListViewController" customModule="ExampleMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="cGq-gd-62K" customClass="MoviesListViewController" customModule="MotoricaStart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AsL-Ew-d83">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,14 +88,14 @@
         <!--Movies List Table View Controller-->
         <scene sceneID="2RN-uU-Kch">
             <objects>
-                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="dtm-sz-Zlw" customClass="MoviesListTableViewController" customModule="ExampleMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="dtm-sz-Zlw" customClass="MoviesListTableViewController" customModule="MotoricaStart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C0X-iN-eQJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoviesListItemCell" id="uUP-Ga-BsY" customClass="MoviesListItemCell" customModule="ExampleMVVM" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoviesListItemCell" id="uUP-Ga-BsY" customClass="MoviesListItemCell" customModule="MotoricaStart" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uUP-Ga-BsY" id="OzQ-03-uhC">
@@ -153,6 +153,47 @@
                                     <outlet property="titleLabel" destination="we8-9y-ZfZ" id="JCo-dL-MCT"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdMovieCollectionViewCell" id="XeS-vw-k0m" customClass="AdMovieCollectionViewCell" customModule="MotoricaStart" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="190" width="375" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XeS-vw-k0m" id="gSR-fY-Ufq" colorLabel="IBBuiltInLabel-Yellow">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvL-ac-bQT">
+                                            <rect key="frame" x="16" y="11" width="35" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Release Date" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4J-Xj-Cfh">
+                                            <rect key="frame" x="16" y="35" width="90" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zV9-Vc-UIh">
+                                            <rect key="frame" x="14" y="93" width="347" height="32"/>
+                                        </slider>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    <constraints>
+                                        <constraint firstItem="BvL-ac-bQT" firstAttribute="leading" secondItem="gSR-fY-Ufq" secondAttribute="leadingMargin" id="2kM-gw-yCb"/>
+                                        <constraint firstItem="BvL-ac-bQT" firstAttribute="top" secondItem="gSR-fY-Ufq" secondAttribute="top" constant="11" id="8aW-jA-3ym"/>
+                                        <constraint firstItem="zV9-Vc-UIh" firstAttribute="top" secondItem="K4J-Xj-Cfh" secondAttribute="bottom" constant="40" id="EX6-Ys-fsW"/>
+                                        <constraint firstItem="zV9-Vc-UIh" firstAttribute="leading" secondItem="gSR-fY-Ufq" secondAttribute="leading" constant="16" id="Frs-XM-8Ia"/>
+                                        <constraint firstAttribute="bottom" secondItem="zV9-Vc-UIh" secondAttribute="bottom" constant="16" id="N24-Ax-RqN"/>
+                                        <constraint firstItem="K4J-Xj-Cfh" firstAttribute="leading" secondItem="BvL-ac-bQT" secondAttribute="leading" id="nRe-jC-XAN"/>
+                                        <constraint firstItem="K4J-Xj-Cfh" firstAttribute="top" secondItem="BvL-ac-bQT" secondAttribute="bottom" constant="3.5" id="vRW-gx-QR6"/>
+                                        <constraint firstAttribute="trailing" secondItem="zV9-Vc-UIh" secondAttribute="trailing" constant="16" id="zB1-Dm-wAN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="K4J-Xj-Cfh" id="t9r-h2-kkU"/>
+                                    <outlet property="titleLabel" destination="BvL-ac-bQT" id="vgs-fC-Ct9"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="dtm-sz-Zlw" id="tdc-fM-6vW"/>
@@ -162,12 +203,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XsE-IX-epx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568.79999999999995" y="214.54272863568218"/>
+            <point key="canvasLocation" x="650" y="43"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

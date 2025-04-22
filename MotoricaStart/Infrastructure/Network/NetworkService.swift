@@ -1,5 +1,7 @@
 import Foundation
 
+let showLogs: Bool = false
+
 enum NetworkError: Error {
     case error(statusCode: Int, data: Data?)
     case notConnected
@@ -66,15 +68,15 @@ final class DefaultNetworkService {
                     error = self.resolve(error: requestError)
                 }
                 
-                self.logger.log(error: error)
+                if (showLogs) { self.logger.log(error: error) }
                 completion(.failure(error))
             } else {
-                self.logger.log(responseData: data, response: response)
+                if (showLogs) { self.logger.log(responseData: data, response: response) }
                 completion(.success(data))
             }
         }
     
-        logger.log(request: request)
+        if (showLogs) { logger.log(request: request) }
 
         return sessionDataTask
     }

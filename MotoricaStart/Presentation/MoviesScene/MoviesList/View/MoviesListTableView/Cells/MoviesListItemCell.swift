@@ -26,6 +26,7 @@ final class MoviesListItemCell: UITableViewCell {
         dateLabel.text = viewModel.releaseDate
         overviewLabel.text = viewModel.overview
         updatePosterImage(width: Int(posterImageView.imageSizeAfterAspectFit.scaledSize.width))
+//        contentView.backgroundColor = viewModel.isAd ? .systemOrange : .white
     }
 
     private func updatePosterImage(width: Int) {

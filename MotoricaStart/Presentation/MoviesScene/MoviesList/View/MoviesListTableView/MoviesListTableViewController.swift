@@ -30,7 +30,6 @@ final class MoviesListTableViewController: UITableViewController {
     }
 
     // MARK: - Private
-
     private func setupViews() {
         tableView.estimatedRowHeight = MoviesListItemCell.height
         tableView.rowHeight = UITableView.automaticDimension
@@ -38,7 +37,6 @@ final class MoviesListTableViewController: UITableViewController {
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
-
 extension MoviesListTableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,22 +44,38 @@ extension MoviesListTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: MoviesListItemCell.reuseIdentifier,
-            for: indexPath
-        ) as? MoviesListItemCell else {
-            assertionFailure("Cannot dequeue reusable cell \(MoviesListItemCell.self) with reuseIdentifier: \(MoviesListItemCell.reuseIdentifier)")
-            return UITableViewCell()
+        let item = viewModel.items.value[indexPath.row]
+        print("Item at \(indexPath.row): \(item)")
+        
+        switch item {
+            case .movie(let movieVM):
+                guard let cell = tableView.dequeueReusableCell(
+                    withIdentifier: MoviesListItemCell.reuseIdentifier,
+                    for: indexPath
+                ) as? MoviesListItemCell else {
+                    assertionFailure("Cannot dequeue reusable cell \(MoviesListItemCell.self) with reuseIdentifier: \(MoviesListItemCell.reuseIdentifier)")
+                    return UITableViewCell()
+                }
+                
+                cell.fill(with: movieVM, posterImagesRepository: posterImagesRepository)
+                
+                if indexPath.row == viewModel.items.value.count - 1 {
+                    viewModel.didLoadNextPage()
+                }
+                
+                return cell
+                
+            case .ad(let adVM):
+                guard let cell = tableView.dequeueReusableCell(
+                    withIdentifier: AdMovieCollectionViewCell.reuseIdentifier,
+                    for: indexPath
+                ) as? AdMovieCollectionViewCell else {
+                    assertionFailure("Cannot dequeue ad cell")
+                    return UITableViewCell()
+                }
+//                cell.configure(with: adVM)
+                return cell
         }
-
-        cell.fill(with: viewModel.items.value[indexPath.row],
-                  posterImagesRepository: posterImagesRepository)
-
-        if indexPath.row == viewModel.items.value.count - 1 {
-            viewModel.didLoadNextPage()
-        }
-
-        return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

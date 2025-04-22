@@ -6,7 +6,10 @@ extension MoviesResponseEntity {
         return .init(
             page: Int(page),
             totalPages: Int(totalPages),
-            movies: movies?.allObjects.map { ($0 as! MovieResponseEntity).toDTO() } ?? []
+
+            movies: (movies?.allObjects as? [MovieResponseEntity] ?? [])
+                .sorted { $0.id < $1.id }
+                .map { $0.toDTO() }
         )
     }
 }
@@ -19,7 +22,8 @@ extension MovieResponseEntity {
             genre: MoviesResponseDTO.MovieDTO.GenreDTO(rawValue: genre ?? ""),
             posterPath: posterPath,
             overview: overview,
-            releaseDate: releaseDate
+            releaseDate: releaseDate,
+            isAd: isAd
         )
     }
 }
@@ -54,6 +58,7 @@ extension MoviesResponseDTO.MovieDTO {
         entity.posterPath = posterPath
         entity.overview = overview
         entity.releaseDate = releaseDate
+        entity.isAd = isAd ?? false
         return entity
     }
 }

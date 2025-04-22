@@ -22,10 +22,12 @@ extension MoviesResponseDTO {
             case posterPath = "poster_path"
             case overview
             case releaseDate = "release_date"
+            case isAd
         }
         enum GenreDTO: String, Decodable {
-            case adventure
+            case adventure = "adventure"
             case scienceFiction = "science_fiction"
+            case unknown
         }
         let id: Int
         let title: String?
@@ -33,6 +35,25 @@ extension MoviesResponseDTO {
         let posterPath: String?
         let overview: String?
         let releaseDate: String?
+        var isAd: Bool? = false
+        
+        init(
+            id: Int,
+            title: String?,
+            genre: GenreDTO?,
+            posterPath: String?,
+            overview: String?,
+            releaseDate: String?,
+            isAd: Bool? = false
+        ) {
+            self.id = id
+            self.title = title
+            self.genre = genre
+            self.posterPath = posterPath
+            self.overview = overview
+            self.releaseDate = releaseDate
+            self.isAd = isAd
+        }
     }
 }
 
@@ -48,12 +69,17 @@ extension MoviesResponseDTO {
 
 extension MoviesResponseDTO.MovieDTO {
     func toDomain() -> Movie {
-        return .init(id: Movie.Identifier(id),
-                     title: title,
-                     genre: genre?.toDomain(),
-                     posterPath: posterPath,
-                     overview: overview,
-                     releaseDate: dateFormatter.date(from: releaseDate ?? ""))
+        let movie = Movie(
+                id: Movie.Identifier(id),
+                title: title,
+                genre: genre?.toDomain(),
+                posterPath: posterPath,
+                overview: overview,
+                releaseDate: dateFormatter.date(from: releaseDate ?? ""),
+                isAd: isAd ?? false
+            )
+        print("Mapped Movie: \(movie)")
+        return movie
     }
 }
 
@@ -62,6 +88,7 @@ extension MoviesResponseDTO.MovieDTO.GenreDTO {
         switch self {
         case .adventure: return .adventure
         case .scienceFiction: return .scienceFiction
+        case .unknown: return .adventure
         }
     }
 }

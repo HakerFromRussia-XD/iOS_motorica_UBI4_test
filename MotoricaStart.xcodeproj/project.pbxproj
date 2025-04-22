@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -230,6 +230,10 @@
 		FC740817216555C500FE52A5 /* UserDefaultsMoviesQueriesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMoviesQueriesStorage.swift; sourceTree = "<group>"; };
 		FC7408192165574400FE52A5 /* MovieQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		658A1F462DAD44C600FB98E4 /* Mock */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Mock; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1F02DE2F22F8507500E40C3A /* Frameworks */ = {
@@ -513,6 +517,7 @@
 		1FA533D1201EF1EC00747E55 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				658A1F462DAD44C600FB98E4 /* Mock */,
 				1FA533D2201EF21000747E55 /* Entities */,
 				1FA533D8201EF2F100747E55 /* UseCases */,
 				1FF3242F2229AC780004E6CC /* Interfaces */,
@@ -892,6 +897,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				658A1F462DAD44C600FB98E4 /* Mock */,
+			);
 			name = MotoricaStart;
 			productName = CodeChallenge;
 			productReference = 1FA53389201E1FDE00747E55 /* MotoricaStart.app */;
@@ -909,6 +917,9 @@
 			);
 			dependencies = (
 				1FA5339F201E1FDE00747E55 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				658A1F462DAD44C600FB98E4 /* Mock */,
 			);
 			name = MotoricaStartTests;
 			productName = CodeChallengeTests;
@@ -942,7 +953,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1FA53384201E1FDE00747E55 /* Build configuration list for PBXProject "ExampleMVVM" */;
+			buildConfigurationList = 1FA53384201E1FDE00747E55 /* Build configuration list for PBXProject "MotoricaStart" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1163,7 +1174,11 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleMVVMUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.solano.ExampleMVVMUITests;
@@ -1182,7 +1197,11 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleMVVMUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.solano.ExampleMVVMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1308,7 +1327,8 @@
 					SwiftUI,
 				);
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1324,12 +1344,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R7K637DW83;
 				IMAGE_BASE_URL = "http://image.tmdb.org";
-				INFOPLIST_FILE = "$(SRCROOT)/ExampleMVVM/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MotoricaStart/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Motorica start";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.motorica.start;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1349,12 +1377,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R7K637DW83;
 				IMAGE_BASE_URL = "http://image.tmdb.org";
-				INFOPLIST_FILE = "$(SRCROOT)/ExampleMVVM/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MotoricaStart/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Motorica start";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.motorica.start;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1372,7 +1408,11 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleMVVMTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "Oleh-Kudinov.ExampleMVVMTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1392,7 +1432,11 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExampleMVVMTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "Oleh-Kudinov.ExampleMVVMTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1414,7 +1458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		1FA53384201E1FDE00747E55 /* Build configuration list for PBXProject "ExampleMVVM" */ = {
+		1FA53384201E1FDE00747E55 /* Build configuration list for PBXProject "MotoricaStart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FA533A4201E1FDE00747E55 /* Debug */,
