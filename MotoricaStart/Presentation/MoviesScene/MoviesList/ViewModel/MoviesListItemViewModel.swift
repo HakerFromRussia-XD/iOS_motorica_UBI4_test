@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct MoviesListItemViewModel: Equatable {
+struct MoviesListItemViewModel: Equatable, Hashable { // Assistant: добавил Hashable
     let title: String
     let overview: String
     let releaseDate: String

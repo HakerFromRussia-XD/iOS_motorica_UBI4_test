@@ -8,6 +8,7 @@ protocol SearchMoviesUseCase {
     ) -> Cancellable?
 }
 
+
 final class DefaultSearchMoviesUseCase: SearchMoviesUseCase {
     private let moviesRepository: MoviesRepository
     private let moviesQueriesRepository: MoviesQueriesRepository

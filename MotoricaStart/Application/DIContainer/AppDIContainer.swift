@@ -33,4 +33,15 @@ final class AppDIContainer {
         )
         return MoviesSceneDIContainer(dependencies: dependencies)
     }
+    
+    // MARK: - Bluetooth
+    lazy var bluetoothRepository: BluetoothRepository = {
+        BluetoothRepositoryImpl()
+    }()
+    func makeBluetoothSceneDIContainer() -> BluetoothSceneDIContainer {
+        let deps = BluetoothSceneDIContainer.Dependencies(
+            bluetoothRepository: bluetoothRepository
+        )
+        return BluetoothSceneDIContainer(dependencies: deps)
+    }
 }

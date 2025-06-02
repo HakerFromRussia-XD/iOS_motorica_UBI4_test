@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 struct MoviesListViewModelActions {
     /// Note: if you would need to edit movie inside Details screen and update this Movies List screen with updated movie then you would need this closure:
@@ -38,10 +39,12 @@ protocol MoviesListViewModelOutput {
 typealias MoviesListViewModel = MoviesListViewModelInput & MoviesListViewModelOutput
 
 final class DefaultMoviesListViewModel: MoviesListViewModel {
-
+    
+//    @Published private(set) var movies: [MoviesResponseDTO.MovieDTO] = []
+    @Published private(set) var movies: [Movie] = []
     private let searchMoviesUseCase: SearchMoviesUseCase
     private let actions: MoviesListViewModelActions?
-
+    
     var currentPage: Int = 0
     var totalPageCount: Int = 1
     var hasMorePages: Bool { currentPage < totalPageCount }
@@ -88,7 +91,7 @@ final class DefaultMoviesListViewModel: MoviesListViewModel {
         
         items.value = moviesPage.movies.map{ movie in
             if movie.isAd { // ← Проверяем флаг
-                return ListItemType.ad(AdListItemViewModel(movie: movie))
+                return ListItemType.slider(AdListItemViewModel(movie: movie))
             } else {
                 return ListItemType.movie(MoviesListItemViewModel(movie: movie))
             }
@@ -133,6 +136,16 @@ final class DefaultMoviesListViewModel: MoviesListViewModel {
             NSLocalizedString("No internet connection", comment: "") :
             NSLocalizedString("Failed loading movies", comment: "")
     }
+    
+//    private func handle(dto: MoviesResponseDTO) {
+//        let page = MoviesPage(page: dto.page,
+//                              totalPages: dto.totalPages,
+//                              movies: dto.movies)
+//        pages.append(page)
+//
+//        // объединяем все страницы и пушим в @Published-свойство
+//        movies = pages.flatMap(\.movies)          // movies — это @Published var movies …
+//    }
 
     private func update(movieQuery: MovieQuery) {
         resetPages()
@@ -140,9 +153,9 @@ final class DefaultMoviesListViewModel: MoviesListViewModel {
     }
 }
 
-enum ListItemType {
+enum ListItemType: Hashable { // Assistant: добавил Hashable
     case movie(MoviesListItemViewModel)
-    case ad(AdListItemViewModel)
+    case slider(AdListItemViewModel)
 }
 // MARK: - INPUT. View event methods
 

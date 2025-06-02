@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct AdListItemViewModel: Equatable {
+struct AdListItemViewModel: Equatable, Hashable { // Assistant: добавил Hashable
     let title: String
     let overview: String
     let releaseDate: String

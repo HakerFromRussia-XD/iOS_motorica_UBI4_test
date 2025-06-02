@@ -2,6 +2,12 @@ import UIKit
 
 final class MoviesListTableViewController: UITableViewController {
 
+    // Assistant: Добавляем enum Section и свойство dataSource для Diffable Data Source
+    private enum Section {
+        case main
+    }
+    private var dataSource: UITableViewDiffableDataSource<Section, ListItemType>!
+    
     var viewModel: MoviesListViewModel!
 
     var posterImagesRepository: PosterImagesRepository?
@@ -12,11 +18,24 @@ final class MoviesListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        // Assistant: Применяем начальный снапшот данных
+        applySnapshot(animatingDifferences: false)
+    }
+    
+    // Assistant: Заменяем reload() на применение снапшота, чтобы сохранять состояния ячеек
+    func reload() {
+        applySnapshot(animatingDifferences: false)
     }
 
-    func reload() {
-        tableView.reloadData()
+    
+    // Assistant: Общая функция для обновления таблицы через DiffableDataSource
+    private func applySnapshot(animatingDifferences: Bool) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, ListItemType>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(viewModel.items.value)
+        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
+
 
     func updateLoading(_ loading: MoviesListViewModelLoading?) {
         switch loading {
@@ -33,6 +52,41 @@ final class MoviesListTableViewController: UITableViewController {
     private func setupViews() {
         tableView.estimatedRowHeight = MoviesListItemCell.height
         tableView.rowHeight = UITableView.automaticDimension
+        
+        dataSource = UITableViewDiffableDataSource<Section, ListItemType>(
+            tableView: tableView
+        ) { [weak self] tableView, indexPath, item in
+            guard let self = self else { return nil }
+            switch item {
+            case .movie(let vm):
+                let cell = tableView.dequeueReusableCell(
+                    withIdentifier: MoviesListItemCell.reuseIdentifier,
+                    for: indexPath
+                ) as! MoviesListItemCell
+                cell.fill(with: vm, posterImagesRepository: self.posterImagesRepository)
+                // подгрузка следующей страницы
+                if indexPath.row == self.viewModel.items.value.count - 1 {
+                    self.viewModel.didLoadNextPage()
+                }
+                return cell
+
+            case .slider(let vm):
+                let cell = tableView.dequeueReusableCell(
+                    withIdentifier: SliderViewCell.reuseIdentifier,
+                    for: indexPath
+                ) as! SliderViewCell
+                cell.configure(with: vm)
+                return cell
+            }
+        }
+    }
+    
+    // Assistant: Обрабатываем появление последней ячейки для подгрузки следующей страницы
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let itemsCount = viewModel.items.value.count
+        if indexPath.row == itemsCount - 1 {
+            viewModel.didLoadNextPage()
+        }
     }
 }
 
@@ -65,11 +119,11 @@ extension MoviesListTableViewController {
                 
                 return cell
                 
-            case .ad(let adVM):
+            case .slider(let slider):
                 guard let cell = tableView.dequeueReusableCell(
-                    withIdentifier: AdMovieCollectionViewCell.reuseIdentifier,
+                    withIdentifier: SliderViewCell.reuseIdentifier,
                     for: indexPath
-                ) as? AdMovieCollectionViewCell else {
+                ) as? SliderViewCell else {
                     assertionFailure("Cannot dequeue ad cell")
                     return UITableViewCell()
                 }
