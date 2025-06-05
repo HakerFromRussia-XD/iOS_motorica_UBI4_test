@@ -75,14 +75,9 @@ final class MoviesListViewController: UIViewController, StoryboardInstantiable, 
         storage.save(response: mockResponseDTO, for: requestDTO) { [weak self] in
             self?.viewModel.didSearch(query: "My request")             // ← чтение идёт уже из свежего кэша
         }
-
-        
-//        let coroutineScope = CoroutineScope(context: Dispatchers.Main)
-        
-//        let bleCommandExecutor = BleCommandExecutor()
         
         let parser = BLEParserBridge()
-        let rawBytes: [UInt8] = [0x40, 0xFF, 0x0A]
+        let rawBytes: [UInt8] = [0x40, 0xFF, 0x0A, 0x40, 0xFF, 0x0A, 0x40, 0xFF, 0x0A, 0x40, 0xFF, 0x0A]
         let kotlinByteArray = KotlinByteArray(size: Int32(rawBytes.count))
         for (index, byte) in rawBytes.enumerated() {
             kotlinByteArray.set(index: Int32(index), value: Int8(bitPattern: byte))
