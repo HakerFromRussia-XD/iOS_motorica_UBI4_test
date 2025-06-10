@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedAllOptionsCompanion, SharedAllOptions, SharedTestModelCompanion, SharedTestModel, SharedTokenCompanion, SharedToken, SharedFingerAngle, SharedFingerSpeed, SharedFingersEncoderValue, SharedGestureState, SharedGestureStateWithEncoders, SharedProfileSettings, SharedMR, SharedResourcesResourcePlatformDetails, SharedMRStrings, SharedResourcesStringResource, SharedBLECommands, SharedKotlinByteArray, SharedBindingGestureGroup, SharedGestureWithAddress, SharedRotationGroup, SharedBlockingQueueUbi4, SharedDeviceInfoStructs, SharedBleDevice, SharedParameterProviderCompanion, SharedBaseParameterInfoStruct, SharedSampleGattAttributes, SharedBaseParameterInfoSerializer, SharedBaseParameterWidgetStruct, SharedBaseParameterInfoStructCompanion, SharedDeviceInfoStructsCompanion, SharedDeviceInfoStructsSerializer, SharedFullInicializeConnectionSerializer, SharedFullInicializeConnectionStruct, SharedFullInicializeConnectionStructCompanion, SharedAdditionalInfoSizeSerializer, SharedAdditionalInfoSizeStruct, SharedAdditionalInfoSizeStructCompanion, SharedBindingGestureGroupCompanion, SharedKotlinPair<__covariant A, __covariant B>, SharedBindingGroupSerializer, SharedGesture, SharedGestureCompanion, SharedGestureSerializer, SharedOpticTrainingSerializer, SharedOpticTrainingStruct, SharedOpticTrainingStructCompanion, SharedPlotThresholdsCompanion, SharedPlotThresholds, SharedPlotThresholdsSerializer, SharedRotationGroupCompanion, SharedRotationGroupSerializer, SharedSprGestureItem, SharedBLEState, SharedBLEParser, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedBLEStateState, SharedKotlinArray<T>, SharedConnectionState, SharedUiState, SharedWidgetState, SharedBaseSubDeviceArrayInfoDataSerializer, SharedBaseSubDeviceArrayInfoDataStruct, SharedBaseSubDeviceInfoStruct, SharedBaseSubDeviceArrayInfoDataStructCompanion, SharedBaseSubDeviceArrayInfoSerializer, SharedBaseSubDeviceArrayInfoStruct, SharedBaseSubDeviceArrayInfoStructCompanion, SharedBaseSubDeviceInfoSerializer, SharedBaseSubDeviceInfoStructCompanion, SharedCommandParameterWidgetESerializer, SharedCommandParameterWidgetEStruct, SharedBaseParameterWidgetEStruct, SharedCommandParameterWidgetEStructCompanion, SharedCommandParameterWidgetSSerializer, SharedCommandParameterWidgetSStruct, SharedBaseParameterWidgetSStruct, SharedCommandParameterWidgetSStructCompanion, SharedDataSpinnerParameterWidgetSerializer, SharedDataSpinnerParameterWidgetStruct, SharedDataSpinnerParameterWidgetStructCompanion, SharedGestureOpticParameterWidgetESerializer, SharedGestureOpticParameterWidgetEStruct, SharedGestureOpticParameterWidgetEStructCompanion, SharedGestureParameterWidgetESerializer, SharedGestureParameterWidgetEStruct, SharedGestureParameterWidgetEStructCompanion, SharedOpticStartLearningWidgetESerializer, SharedOpticStartLearningWidgetEStruct, SharedOpticStartLearningWidgetEStructCompanion, SharedOpticStartLearningWidgetSSerializer, SharedOpticStartLearningWidgetSStruct, SharedOpticStartLearningWidgetSStructCompanion, SharedPlotParameterWidgetESerializer, SharedPlotParameterWidgetEStruct, SharedPlotParameterWidgetEStructCompanion, SharedPlotParameterWidgetSSerializer, SharedPlotParameterWidgetSStruct, SharedPlotParameterWidgetSStructCompanion, SharedSliderParameterWidgetESerializer, SharedSliderParameterWidgetEStruct, SharedSliderParameterWidgetEStructCompanion, SharedSliderParameterWidgetSSerializer, SharedSliderParameterWidgetSStruct, SharedSliderParameterWidgetSStructCompanion, SharedSpinnerParameterWidgetESerializer, SharedSpinnerParameterWidgetEStruct, SharedSpinnerParameterWidgetEStructCompanion, SharedSpinnerParameterWidgetSSerializer, SharedSpinnerParameterWidgetSStruct, SharedSpinnerParameterWidgetSStructCompanion, SharedSwitchParameterWidgetESerializer, SharedSwitchParameterWidgetEStruct, SharedSwitchParameterWidgetEStructCompanion, SharedSwitchParameterWidgetSSerializer, SharedSwitchParameterWidgetSStruct, SharedSwitchParameterWidgetSStructCompanion, SharedThresholdParameterWidgetESerializer, SharedThresholdParameterWidgetEStruct, SharedThresholdParameterWidgetEStructCompanion, SharedThresholdParameterWidgetSSerializer, SharedThresholdParameterWidgetSStruct, SharedThresholdParameterWidgetSStructCompanion, SharedBaseParameterWidgetESerializer, SharedBaseParameterWidgetEStructCompanion, SharedBaseParameterWidgetSSerializer, SharedBaseParameterWidgetSStructCompanion, SharedBaseParameterWidgetSerializer, SharedParameterInfo<A, B, C, D>, SharedBaseParameterWidgetStructCompanion, SharedParameterRef, SharedPlotParameterRef, SharedGesturesId, SharedConfigOMGDataCollectionCompanion, SharedConfigOMGDataCollection, SharedGesturesIdCompanion, SharedModel, SharedVersion, SharedStatus, SharedSide, SharedSize, SharedOptions, SharedDeviceInfoCompanion, SharedDeviceInfo, SharedModelCompanion, SharedValue, SharedOptionsCompanion, SharedSideCompanion, SharedSizeCompanion, SharedStatusCompanion, SharedValueCompanion, SharedVersionCompanion, SharedDeviceInList_DEVCompanion, SharedDeviceInList_DEV, SharedDevicesList_DEVCompanion, SharedDevicesList_DEV, SharedDialogCollectionGestureItem, SharedSprDialogCollectionGestureItem, SharedGestureConfig, SharedGestureInfo, SharedGesturePhase, SharedLoginRequestCompanion, SharedLoginRequest, SharedLoginResponseCompanion, SharedLoginResponse, SharedUploadResponseCompanion, SharedUploadResponse, SharedClientDataCompanion, SharedClientData, SharedManager, SharedClientDataV2Companion, SharedClientDataV2, SharedDevicesCompanion, SharedDevices, SharedManagerCompanion, SharedUserCompanion, SharedUser, SharedUserV2Companion, SharedUserV2, SharedPlatformFile, SharedFileItem, SharedGesturesItem, SharedOneButtonItem, SharedPlotItem, SharedSliderItem, SharedSpinnerItem, SharedSwitchItem, SharedTrainingGestureItem, SharedPreferenceKeysUBI4, SharedPreferenceKeysUBI4AdditionalParameterInfoType, SharedPreferenceKeysUBI4BaseCommands, SharedPreferenceKeysUBI4DataManagerCommand, SharedPreferenceKeysUBI4DataTableSlotsCode, SharedPreferenceKeysUBI4DataTableSlotsEnum, SharedPreferenceKeysUBI4DeviceInformationCommand, SharedPreferenceKeysUBI4GestureEnum, SharedPreferenceKeysUBI4MobileSettingsKey, SharedPreferenceKeysUBI4ParameterDataCodeEnum, SharedPreferenceKeysUBI4ParameterLimitTypeEnum, SharedPreferenceKeysUBI4ParameterTypeEnum, SharedPreferenceKeysUBI4ParameterWidgetCode, SharedPreferenceKeysUBI4ParameterWidgetDisplayCode, SharedPreferenceKeysUBI4ParameterWidgetLabel, SharedPreferenceKeysUBI4ParameterWidgetLabelType, SharedPreferenceKeysUBI4ParameterWidgetType, SharedPreferenceKeysUBI4TrainingModelState, SharedResourceDrawable, SharedResourceRaw, SharedResourceString, SharedFlagState, SharedGlobalParameters, SharedEncodeHexToInt, SharedRxUpdateMainEventUbi4Wrapper, SharedBaseUrlUtilsUBI4, SharedCastBytesToFloat, SharedCastToUnsignedIntCompanion, SharedConstantManagerUBI4Companion, SharedCrcCalc, SharedEncodeByteToHexCompanion, SharedHyperparameters, SharedParameterInfoProviderCompanion, SharedRetryUtils, NSBundle, SharedKotlinByteIterator, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException;
+@class SharedAllOptionsCompanion, SharedAllOptions, SharedTestModelCompanion, SharedTestModel, SharedTokenCompanion, SharedToken, SharedFingerAngle, SharedFingerSpeed, SharedFingersEncoderValue, SharedGestureState, SharedGestureStateWithEncoders, SharedProfileSettings, SharedMR, SharedResourcesResourcePlatformDetails, SharedMRStrings, SharedResourcesStringResource, SharedBLECommands, SharedKotlinByteArray, SharedBindingGestureGroup, SharedGestureWithAddress, SharedRotationGroup, SharedBlockingQueueUbi4, SharedDeviceInfoStructs, SharedBleDevice, SharedParameterProviderCompanion, SharedBaseParameterInfoStruct, SharedSampleGattAttributes, SharedBaseParameterInfoSerializer, SharedBaseParameterWidgetStruct, SharedBaseParameterInfoStructCompanion, SharedDeviceInfoStructsCompanion, SharedDeviceInfoStructsSerializer, SharedFullInicializeConnectionSerializer, SharedFullInicializeConnectionStruct, SharedFullInicializeConnectionStructCompanion, SharedAdditionalInfoSizeSerializer, SharedAdditionalInfoSizeStruct, SharedAdditionalInfoSizeStructCompanion, SharedBindingGestureGroupCompanion, SharedKotlinPair<__covariant A, __covariant B>, SharedBindingGroupSerializer, SharedGesture, SharedGestureCompanion, SharedGestureSerializer, SharedOpticTrainingSerializer, SharedOpticTrainingStruct, SharedOpticTrainingStructCompanion, SharedPlotThresholdsCompanion, SharedPlotThresholds, SharedPlotThresholdsSerializer, SharedRotationGroupCompanion, SharedRotationGroupSerializer, SharedSprGestureItem, SharedBLEState, SharedBLEParser, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedBLEStateState, SharedKotlinArray<T>, SharedConnectionState, SharedUiState, SharedWidgetState, SharedBaseSubDeviceArrayInfoDataSerializer, SharedBaseSubDeviceArrayInfoDataStruct, SharedBaseSubDeviceInfoStruct, SharedBaseSubDeviceArrayInfoDataStructCompanion, SharedBaseSubDeviceArrayInfoSerializer, SharedBaseSubDeviceArrayInfoStruct, SharedBaseSubDeviceArrayInfoStructCompanion, SharedBaseSubDeviceInfoSerializer, SharedBaseSubDeviceInfoStructCompanion, SharedCommandParameterWidgetESerializer, SharedCommandParameterWidgetEStruct, SharedBaseParameterWidgetEStruct, SharedCommandParameterWidgetEStructCompanion, SharedCommandParameterWidgetSSerializer, SharedCommandParameterWidgetSStruct, SharedBaseParameterWidgetSStruct, SharedCommandParameterWidgetSStructCompanion, SharedDataSpinnerParameterWidgetSerializer, SharedDataSpinnerParameterWidgetStruct, SharedDataSpinnerParameterWidgetStructCompanion, SharedGestureOpticParameterWidgetESerializer, SharedGestureOpticParameterWidgetEStruct, SharedGestureOpticParameterWidgetEStructCompanion, SharedGestureParameterWidgetESerializer, SharedGestureParameterWidgetEStruct, SharedGestureParameterWidgetEStructCompanion, SharedOpticStartLearningWidgetESerializer, SharedOpticStartLearningWidgetEStruct, SharedOpticStartLearningWidgetEStructCompanion, SharedOpticStartLearningWidgetSSerializer, SharedOpticStartLearningWidgetSStruct, SharedOpticStartLearningWidgetSStructCompanion, SharedPlotParameterWidgetESerializer, SharedPlotParameterWidgetEStruct, SharedPlotParameterWidgetEStructCompanion, SharedPlotParameterWidgetSSerializer, SharedPlotParameterWidgetSStruct, SharedPlotParameterWidgetSStructCompanion, SharedSliderParameterWidgetESerializer, SharedSliderParameterWidgetEStruct, SharedSliderParameterWidgetEStructCompanion, SharedSliderParameterWidgetSSerializer, SharedSliderParameterWidgetSStruct, SharedSliderParameterWidgetSStructCompanion, SharedSpinnerParameterWidgetESerializer, SharedSpinnerParameterWidgetEStruct, SharedSpinnerParameterWidgetEStructCompanion, SharedSpinnerParameterWidgetSSerializer, SharedSpinnerParameterWidgetSStruct, SharedSpinnerParameterWidgetSStructCompanion, SharedSwitchParameterWidgetESerializer, SharedSwitchParameterWidgetEStruct, SharedSwitchParameterWidgetEStructCompanion, SharedSwitchParameterWidgetSSerializer, SharedSwitchParameterWidgetSStruct, SharedSwitchParameterWidgetSStructCompanion, SharedThresholdParameterWidgetESerializer, SharedThresholdParameterWidgetEStruct, SharedThresholdParameterWidgetEStructCompanion, SharedThresholdParameterWidgetSSerializer, SharedThresholdParameterWidgetSStruct, SharedThresholdParameterWidgetSStructCompanion, SharedBaseParameterWidgetESerializer, SharedBaseParameterWidgetEStructCompanion, SharedBaseParameterWidgetSSerializer, SharedBaseParameterWidgetSStructCompanion, SharedBaseParameterWidgetSerializer, SharedParameterInfo<A, B, C, D>, SharedBaseParameterWidgetStructCompanion, SharedParameterRef, SharedPlotParameterRef, SharedGesturesId, SharedConfigOMGDataCollectionCompanion, SharedConfigOMGDataCollection, SharedGesturesIdCompanion, SharedModel, SharedVersion, SharedStatus, SharedSide, SharedSize, SharedOptions, SharedDeviceInfoCompanion, SharedDeviceInfo, SharedModelCompanion, SharedValue, SharedOptionsCompanion, SharedSideCompanion, SharedSizeCompanion, SharedStatusCompanion, SharedValueCompanion, SharedVersionCompanion, SharedDeviceInList_DEVCompanion, SharedDeviceInList_DEV, SharedDevicesList_DEVCompanion, SharedDevicesList_DEV, SharedDialogCollectionGestureItem, SharedSprDialogCollectionGestureItem, SharedGestureConfig, SharedGestureInfo, SharedGesturePhase, SharedClientDataCompanion, SharedClientData, SharedManager, SharedClientDataV2Companion, SharedClientDataV2, SharedDevicesCompanion, SharedDevices, SharedManagerCompanion, SharedUserCompanion, SharedUser, SharedUserV2Companion, SharedUserV2, SharedPlatformFile, SharedFileItem, SharedGesturesItem, SharedOneButtonItem, SharedPlotItem, SharedSliderItem, SharedSpinnerItem, SharedSwitchItem, SharedTrainingGestureItem, SharedPreferenceKeysUBI4, SharedPreferenceKeysUBI4AdditionalParameterInfoType, SharedPreferenceKeysUBI4BaseCommands, SharedPreferenceKeysUBI4DataManagerCommand, SharedPreferenceKeysUBI4DataTableSlotsCode, SharedPreferenceKeysUBI4DataTableSlotsEnum, SharedPreferenceKeysUBI4DeviceInformationCommand, SharedPreferenceKeysUBI4GestureEnum, SharedPreferenceKeysUBI4MobileSettingsKey, SharedPreferenceKeysUBI4ParameterDataCodeEnum, SharedPreferenceKeysUBI4ParameterLimitTypeEnum, SharedPreferenceKeysUBI4ParameterTypeEnum, SharedPreferenceKeysUBI4ParameterWidgetCode, SharedPreferenceKeysUBI4ParameterWidgetDisplayCode, SharedPreferenceKeysUBI4ParameterWidgetLabel, SharedPreferenceKeysUBI4ParameterWidgetLabelType, SharedPreferenceKeysUBI4ParameterWidgetType, SharedPreferenceKeysUBI4TrainingModelState, SharedResourceDrawable, SharedResourceRaw, SharedResourceString, SharedBLEParserBridge, SharedWidgetStateBridge, SharedFlagState, SharedGlobalParameters, SharedEncodeHexToInt, SharedRxUpdateMainEventUbi4Wrapper, SharedBaseUrlUtilsUBI4, SharedCastBytesToFloat, SharedCastToUnsignedIntCompanion, SharedConstantManagerUBI4Companion, SharedCrcCalc, SharedEncodeByteToHexCompanion, SharedHyperparameters, SharedParameterInfoProviderCompanion, SharedRetryUtils, NSBundle, SharedKotlinByteIterator, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException;
 
 @protocol SharedKotlinx_serialization_coreKSerializer, SharedResourcesResourceContainer, SharedKotlinx_coroutines_coreStateFlow, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedResourceProvider, SharedKotlinx_coroutines_coreCoroutineScope, SharedBleCommandExecutor, SharedKotlinComparable, SharedKotlinx_coroutines_coreMutableStateFlow, SharedKotlinx_coroutines_coreMutableSharedFlow, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreRunnable, SharedKotlinSuspendFunction0, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinCoroutineContext, SharedKotlinIterator, SharedKotlinFunction, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinCoroutineContextElement, SharedKotlinCoroutineContextKey, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
@@ -2785,27 +2785,27 @@ __attribute__((swift_name("ConfigOMGDataCollection.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GesturesId")))
 @interface SharedGesturesId : SharedBase
-- (instancetype)initWithNeutral:(NSString * _Nullable)Neutral ThumbFingers:(NSString * _Nullable)ThumbFingers Close:(NSString * _Nullable)Close Open:(NSString * _Nullable)Open Pinch:(NSString * _Nullable)Pinch Indication:(NSString * _Nullable)Indication WristFlex:(NSString * _Nullable)WristFlex WristExtend:(NSString * _Nullable)WristExtend Supination:(NSString * _Nullable)Supination Pronation:(NSString * _Nullable)Pronation Abduction:(NSString * _Nullable)Abduction Adduction:(NSString * _Nullable)Adduction Key:(NSString * _Nullable)Key __attribute__((swift_name("init(Neutral:ThumbFingers:Close:Open:Pinch:Indication:WristFlex:WristExtend:Supination:Pronation:Abduction:Adduction:Key:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithNeutral:(SharedInt * _Nullable)Neutral ThumbFingers:(SharedInt * _Nullable)ThumbFingers Close:(SharedInt * _Nullable)Close Open:(SharedInt * _Nullable)Open Pinch:(SharedInt * _Nullable)Pinch Indication:(SharedInt * _Nullable)Indication WristFlex:(SharedInt * _Nullable)WristFlex WristExtend:(SharedInt * _Nullable)WristExtend Supination:(SharedInt * _Nullable)Supination Pronation:(SharedInt * _Nullable)Pronation Abduction:(SharedInt * _Nullable)Abduction Adduction:(SharedInt * _Nullable)Adduction Key:(SharedInt * _Nullable)Key __attribute__((swift_name("init(Neutral:ThumbFingers:Close:Open:Pinch:Indication:WristFlex:WristExtend:Supination:Pronation:Abduction:Adduction:Key:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedGesturesIdCompanion *companion __attribute__((swift_name("companion")));
-- (SharedGesturesId *)doCopyNeutral:(NSString * _Nullable)Neutral ThumbFingers:(NSString * _Nullable)ThumbFingers Close:(NSString * _Nullable)Close Open:(NSString * _Nullable)Open Pinch:(NSString * _Nullable)Pinch Indication:(NSString * _Nullable)Indication WristFlex:(NSString * _Nullable)WristFlex WristExtend:(NSString * _Nullable)WristExtend Supination:(NSString * _Nullable)Supination Pronation:(NSString * _Nullable)Pronation Abduction:(NSString * _Nullable)Abduction Adduction:(NSString * _Nullable)Adduction Key:(NSString * _Nullable)Key __attribute__((swift_name("doCopy(Neutral:ThumbFingers:Close:Open:Pinch:Indication:WristFlex:WristExtend:Supination:Pronation:Abduction:Adduction:Key:)")));
+- (SharedGesturesId *)doCopyNeutral:(SharedInt * _Nullable)Neutral ThumbFingers:(SharedInt * _Nullable)ThumbFingers Close:(SharedInt * _Nullable)Close Open:(SharedInt * _Nullable)Open Pinch:(SharedInt * _Nullable)Pinch Indication:(SharedInt * _Nullable)Indication WristFlex:(SharedInt * _Nullable)WristFlex WristExtend:(SharedInt * _Nullable)WristExtend Supination:(SharedInt * _Nullable)Supination Pronation:(SharedInt * _Nullable)Pronation Abduction:(SharedInt * _Nullable)Abduction Adduction:(SharedInt * _Nullable)Adduction Key:(SharedInt * _Nullable)Key __attribute__((swift_name("doCopy(Neutral:ThumbFingers:Close:Open:Pinch:Indication:WristFlex:WristExtend:Supination:Pronation:Abduction:Adduction:Key:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSString * _Nullable)getGestureNameByValueValue:(int32_t)value __attribute__((swift_name("getGestureNameByValue(value:)")));
 - (SharedInt * _Nullable)getGestureValueByNameName:(NSString *)name __attribute__((swift_name("getGestureValueByName(name:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property NSString * _Nullable Abduction __attribute__((swift_name("Abduction")));
-@property NSString * _Nullable Adduction __attribute__((swift_name("Adduction")));
-@property NSString * _Nullable Close __attribute__((swift_name("Close")));
-@property NSString * _Nullable Indication __attribute__((swift_name("Indication")));
-@property NSString * _Nullable Key __attribute__((swift_name("Key")));
-@property NSString * _Nullable Neutral __attribute__((swift_name("Neutral")));
-@property NSString * _Nullable Open __attribute__((swift_name("Open")));
-@property NSString * _Nullable Pinch __attribute__((swift_name("Pinch")));
-@property NSString * _Nullable Pronation __attribute__((swift_name("Pronation")));
-@property NSString * _Nullable Supination __attribute__((swift_name("Supination")));
-@property NSString * _Nullable ThumbFingers __attribute__((swift_name("ThumbFingers")));
-@property NSString * _Nullable WristExtend __attribute__((swift_name("WristExtend")));
-@property NSString * _Nullable WristFlex __attribute__((swift_name("WristFlex")));
+@property SharedInt * _Nullable Abduction __attribute__((swift_name("Abduction")));
+@property SharedInt * _Nullable Adduction __attribute__((swift_name("Adduction")));
+@property SharedInt * _Nullable Close __attribute__((swift_name("Close")));
+@property SharedInt * _Nullable Indication __attribute__((swift_name("Indication")));
+@property SharedInt * _Nullable Key __attribute__((swift_name("Key")));
+@property SharedInt * _Nullable Neutral __attribute__((swift_name("Neutral")));
+@property SharedInt * _Nullable Open __attribute__((swift_name("Open")));
+@property SharedInt * _Nullable Pinch __attribute__((swift_name("Pinch")));
+@property SharedInt * _Nullable Pronation __attribute__((swift_name("Pronation")));
+@property SharedInt * _Nullable Supination __attribute__((swift_name("Supination")));
+@property SharedInt * _Nullable ThumbFingers __attribute__((swift_name("ThumbFingers")));
+@property SharedInt * _Nullable WristExtend __attribute__((swift_name("WristExtend")));
+@property SharedInt * _Nullable WristFlex __attribute__((swift_name("WristFlex")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -3220,90 +3220,6 @@ __attribute__((swift_name("GestureWithAddress")))
  *   kotlinx.serialization.Serializable
 */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LoginRequest")))
-@interface SharedLoginRequest : SharedBase
-- (instancetype)initWithUsername:(NSString *)username password:(NSString *)password __attribute__((swift_name("init(username:password:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedLoginRequestCompanion *companion __attribute__((swift_name("companion")));
-- (SharedLoginRequest *)doCopyUsername:(NSString *)username password:(NSString *)password __attribute__((swift_name("doCopy(username:password:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *password __attribute__((swift_name("password")));
-@property (readonly) NSString *username __attribute__((swift_name("username")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LoginRequest.Companion")))
-@interface SharedLoginRequestCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedLoginRequestCompanion *shared __attribute__((swift_name("shared")));
-- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-
-/**
- * @note annotations
- *   kotlinx.serialization.Serializable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LoginResponse")))
-@interface SharedLoginResponse : SharedBase
-- (instancetype)initWithAccessToken:(NSString *)accessToken tokenType:(NSString *)tokenType __attribute__((swift_name("init(accessToken:tokenType:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedLoginResponseCompanion *companion __attribute__((swift_name("companion")));
-- (SharedLoginResponse *)doCopyAccessToken:(NSString *)accessToken tokenType:(NSString *)tokenType __attribute__((swift_name("doCopy(accessToken:tokenType:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *accessToken __attribute__((swift_name("accessToken")));
-@property (readonly) NSString *tokenType __attribute__((swift_name("tokenType")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LoginResponse.Companion")))
-@interface SharedLoginResponseCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedLoginResponseCompanion *shared __attribute__((swift_name("shared")));
-- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-
-/**
- * @note annotations
- *   kotlinx.serialization.Serializable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UploadResponse")))
-@interface SharedUploadResponse : SharedBase
-- (instancetype)initWithMessage:(NSString *)message messageResearch:(NSString *)messageResearch __attribute__((swift_name("init(message:messageResearch:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedUploadResponseCompanion *companion __attribute__((swift_name("companion")));
-- (SharedUploadResponse *)doCopyMessage:(NSString *)message messageResearch:(NSString *)messageResearch __attribute__((swift_name("doCopy(message:messageResearch:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *message __attribute__((swift_name("message")));
-@property (readonly) NSString *messageResearch __attribute__((swift_name("messageResearch")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UploadResponse.Companion")))
-@interface SharedUploadResponseCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedUploadResponseCompanion *shared __attribute__((swift_name("shared")));
-- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-
-/**
- * @note annotations
- *   kotlinx.serialization.Serializable
-*/
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ClientData")))
 @interface SharedClientData : SharedBase
 - (instancetype)initWithId:(SharedInt * _Nullable)id fio:(NSString * _Nullable)fio fname:(NSString * _Nullable)fname sname:(NSString * _Nullable)sname __attribute__((swift_name("init(id:fio:fname:sname:)"))) __attribute__((objc_designated_initializer));
@@ -3617,11 +3533,16 @@ __attribute__((swift_name("PreferenceKeysUBI4")))
 @property (readonly) NSString *FIRST_LOAD_ACCOUNT_INFO __attribute__((swift_name("FIRST_LOAD_ACCOUNT_INFO")));
 @property (readonly) NSString *GAME_LAUNCH_RATE __attribute__((swift_name("GAME_LAUNCH_RATE")));
 @property (readonly) NSString *GESTURE_ID_IN_SYSTEM_UBI4 __attribute__((swift_name("GESTURE_ID_IN_SYSTEM_UBI4")));
+@property (readonly) NSString *KEY_CHECKPOINT_NUMBER __attribute__((swift_name("KEY_CHECKPOINT_NUMBER")));
+@property (readonly) NSString *KEY_PASSWORD __attribute__((swift_name("KEY_PASSWORD")));
+@property (readonly) NSString *KEY_SERIAL __attribute__((swift_name("KEY_SERIAL")));
+@property (readonly) NSString *KEY_TOKEN __attribute__((swift_name("KEY_TOKEN")));
 @property (readonly) NSString *LAST_ACTIVE_GESTURE_FILTER __attribute__((swift_name("LAST_ACTIVE_GESTURE_FILTER")));
 @property (readonly) NSString *LAST_ACTIVE_SETTINGS_FILTER __attribute__((swift_name("LAST_ACTIVE_SETTINGS_FILTER")));
 @property (readonly) NSString *LAST_CONNECTION_MAC_UBI4 __attribute__((swift_name("LAST_CONNECTION_MAC_UBI4")));
 @property (readonly) NSString *LAST_HIDE_COLLECTION_BTN_STATE __attribute__((swift_name("LAST_HIDE_COLLECTION_BTN_STATE")));
 @property (readonly) NSString *MAXIMUM_POINTS __attribute__((swift_name("MAXIMUM_POINTS")));
+@property (readonly) NSString *NAME __attribute__((swift_name("NAME")));
 @property (readonly) NSString *NUMBER_OF_CUPS __attribute__((swift_name("NUMBER_OF_CUPS")));
 @property (readonly) int32_t NUM_ACTIVE_GESTURES __attribute__((swift_name("NUM_ACTIVE_GESTURES")));
 @property (readonly) int32_t NUM_GESTURES __attribute__((swift_name("NUM_GESTURES")));
@@ -3630,6 +3551,7 @@ __attribute__((swift_name("PreferenceKeysUBI4")))
 @property (readonly) NSString *SELECT_GESTURE_SETTINGS_NUM __attribute__((swift_name("SELECT_GESTURE_SETTINGS_NUM")));
 @property (readonly) NSString *SENS_NUM __attribute__((swift_name("SENS_NUM")));
 @property (readonly) NSString *SET_MODE_SMART_CONNECTION __attribute__((swift_name("SET_MODE_SMART_CONNECTION")));
+@property (readonly) NSString *TRAINING_PREFS __attribute__((swift_name("TRAINING_PREFS")));
 @property (readonly) NSString *UBI4_MODE_ACTIVATED __attribute__((swift_name("UBI4_MODE_ACTIVATED")));
 @end
 
@@ -4194,9 +4116,22 @@ __attribute__((swift_name("BleClient")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("BLEParserBridge")))
 @interface SharedBLEParserBridge : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)bLEParserBridge __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedBLEParserBridge *shared __attribute__((swift_name("shared")));
+- (void)observeSlidersCallback:(void (^)(SharedParameterRef *))callback __attribute__((swift_name("observeSliders(callback:)")));
 - (void)parseDataData:(SharedKotlinByteArray *)data __attribute__((swift_name("parseData(data:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("WidgetStateBridge")))
+@interface SharedWidgetStateBridge : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)widgetStateBridge __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedWidgetStateBridge *shared __attribute__((swift_name("shared")));
+- (void)observeSlidersCallback:(void (^)(SharedParameterRef *))callback __attribute__((swift_name("observeSliders(callback:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))

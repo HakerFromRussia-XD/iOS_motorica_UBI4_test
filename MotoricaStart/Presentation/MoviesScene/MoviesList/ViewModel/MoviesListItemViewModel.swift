@@ -16,11 +16,7 @@ extension MoviesListItemViewModel {
         self.posterImagePath = movie.posterPath
         self.overview = movie.overview ?? ""
         self.isAd = movie.isAd
-        if let releaseDate = movie.releaseDate {
-            self.releaseDate = "\(NSLocalizedString("Release Date", comment: "")): \(dateFormatter.string(from: releaseDate))"
-        } else {
-            self.releaseDate = NSLocalizedString("To be announced", comment: "")
-        }
+        self.releaseDate = movie.title_2 ?? ""
     }
 }
 

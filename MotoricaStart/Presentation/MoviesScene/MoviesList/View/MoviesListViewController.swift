@@ -85,6 +85,7 @@ final class MoviesListViewController: UIViewController, StoryboardInstantiable, 
         parser.parseData(data: kotlinByteArray)
     }
 
+
     private func bind(to viewModel: MoviesListViewModel) {
         viewModel.items.observe(on: self) { [weak self] _ in self?.updateItems() }
         viewModel.loading.observe(on: self) { [weak self] in self?.updateLoading($0) }

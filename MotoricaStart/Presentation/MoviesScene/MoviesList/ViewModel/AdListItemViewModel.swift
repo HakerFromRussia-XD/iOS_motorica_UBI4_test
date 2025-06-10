@@ -5,20 +5,16 @@ import Foundation
 struct AdListItemViewModel: Equatable, Hashable { // Assistant: добавил Hashable
     let title: String
     let overview: String
-    let releaseDate: String
+    let title_2: String
     let posterImagePath: String?
 }
 
 extension AdListItemViewModel {
     init(movie: Movie) {
         self.title = movie.title ?? ""
+        self.title_2 = movie.title_2 ?? ""
         self.posterImagePath = movie.posterPath
         self.overview = movie.overview ?? ""
-        if let releaseDate = movie.releaseDate {
-            self.releaseDate = "\(NSLocalizedString("Release Date", comment: "")): \(dateFormatter.string(from: releaseDate))"
-        } else {
-            self.releaseDate = NSLocalizedString("To be announced", comment: "")
-        }
     }
 }
 

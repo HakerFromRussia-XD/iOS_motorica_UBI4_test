@@ -19,6 +19,20 @@ final class MovieDetailsViewController: UIViewController, StoryboardInstantiable
         super.viewDidLoad()
         setupViews()
         bind(to: viewModel)
+        if let windowScene = view.window?.windowScene {
+            // Получаем frame статусбара
+            if let statusBarFrame = windowScene.statusBarManager?.statusBarFrame {
+                // Создаём кастомный UIView для имитации фонового цвета статусбара
+                let statusBarView = UIView(frame: statusBarFrame)
+                statusBarView.backgroundColor = UIColor(named: "ubi4_back") ?? UIColor.black // Используйте свой цвет фона
+                
+                // Добавляем его на главный view
+                view.addSubview(statusBarView)
+                
+                // Размещаем его поверх всех элементов, если нужно
+                view.bringSubviewToFront(statusBarView)
+            }
+        }
     }
 
     private func bind(to viewModel: MovieDetailsViewModel) {
@@ -31,11 +45,13 @@ final class MovieDetailsViewController: UIViewController, StoryboardInstantiable
     }
 
     // MARK: - Private
-
     private func setupViews() {
         title = viewModel.title
         overviewTextView.text = viewModel.overview
         posterImageView.isHidden = viewModel.isPosterImageHidden
         view.accessibilityIdentifier = AccessibilityIdentifier.movieDetailsView
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }

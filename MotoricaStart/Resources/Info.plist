@@ -57,6 +57,13 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Assets/OpenSans-wght.ttf</string>
+		<string>Assets/inter.ttf</string>
+		<string>Assets/sf_pro_display_light.otf</string>
+		<string>Assets/sf_pro_text_bold.otf</string>
+	</array>
 </dict>
 </plist>

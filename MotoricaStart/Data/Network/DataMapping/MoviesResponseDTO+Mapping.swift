@@ -72,10 +72,10 @@ extension MoviesResponseDTO.MovieDTO {
         let movie = Movie(
                 id: Movie.Identifier(id),
                 title: title,
+                title_2: title,
                 genre: genre?.toDomain(),
                 posterPath: posterPath,
                 overview: overview,
-                releaseDate: dateFormatter.date(from: releaseDate ?? ""),
                 isAd: isAd ?? false
             )
         print("Mapped Movie: \(movie)")

@@ -4,10 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf_pro_display_light.otf">
+            <string>SFProDisplay-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Movies List View Controller-->
         <scene sceneID="0BI-7x-XJo">
@@ -34,7 +40,8 @@
                                     </label>
                                     <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZl-fe-PlP">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="ubi4_back"/>
+                                        <color key="tintColor" name="ubi4_back"/>
                                     </containerView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,7 +62,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EzI-qX-rfe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ubi4_back"/>
                         <constraints>
                             <constraint firstItem="EzI-qX-rfe" firstAttribute="bottom" secondItem="URz-eU-usl" secondAttribute="bottom" id="1Yg-At-OqX"/>
                             <constraint firstItem="EzI-qX-rfe" firstAttribute="trailing" secondItem="URz-eU-usl" secondAttribute="trailing" id="BnE-5X-3lQ"/>
@@ -78,11 +85,12 @@
         <scene sceneID="2RN-uU-Kch">
             <objects>
                 <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="dtm-sz-Zlw" customClass="MoviesListTableViewController" customModule="MotoricaStart" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C0X-iN-eQJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C0X-iN-eQJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="ubi4_back"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" name="ubi4_back"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoviesListItemCell" id="uUP-Ga-BsY" customClass="MoviesListItemCell" customModule="MotoricaStart" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="140"/>
@@ -134,6 +142,7 @@
                                         <constraint firstItem="yeA-yy-sWx" firstAttribute="top" secondItem="4Z1-DO-pfb" secondAttribute="bottom" constant="6" id="wvj-a3-OK7"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dateLabel" destination="4Z1-DO-pfb" id="gaN-gB-Pr8"/>
@@ -149,39 +158,71 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvL-ac-bQT">
-                                            <rect key="frame" x="16" y="11" width="35" height="20.5"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Release Date" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4J-Xj-Cfh">
-                                            <rect key="frame" x="16" y="35" width="90" height="18"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zV9-Vc-UIh">
-                                            <rect key="frame" x="14" y="93" width="347" height="32"/>
-                                        </slider>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsa-FJ-L6F">
+                                            <rect key="frame" x="16" y="4" width="343" height="132"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="widget slider description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvL-ac-bQT">
+                                                    <rect key="frame" x="10" y="8" width="119" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="12"/>
+                                                    <color key="textColor" name="ubi4_white"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cI-Ac-7PE">
+                                                    <rect key="frame" x="314" y="8" width="19" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="12"/>
+                                                    <color key="textColor" name="ubi4_white"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zV9-Vc-UIh">
+                                                    <rect key="frame" x="6" y="26.5" width="331" height="32.5"/>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="widget slider description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uoi-Xh-JZg">
+                                                    <rect key="frame" x="11" y="74" width="119" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="12"/>
+                                                    <color key="textColor" name="ubi4_white"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="3Pf-hN-asK">
+                                                    <rect key="frame" x="6" y="90" width="331" height="32.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </slider>
+                                            </subviews>
+                                            <color key="backgroundColor" name="ubi4_gray"/>
+                                            <constraints>
+                                                <constraint firstItem="zV9-Vc-UIh" firstAttribute="top" secondItem="BvL-ac-bQT" secondAttribute="bottom" constant="4" id="7wU-8U-lep"/>
+                                                <constraint firstItem="Uoi-Xh-JZg" firstAttribute="leading" secondItem="BvL-ac-bQT" secondAttribute="leading" id="80S-vE-dgg"/>
+                                                <constraint firstItem="Uoi-Xh-JZg" firstAttribute="top" secondItem="zV9-Vc-UIh" secondAttribute="bottom" constant="16" id="CUE-6o-Hgp"/>
+                                                <constraint firstAttribute="height" constant="132" id="GGf-Ln-hT8"/>
+                                                <constraint firstAttribute="trailing" secondItem="zV9-Vc-UIh" secondAttribute="trailing" constant="8" id="JhQ-si-gDq"/>
+                                                <constraint firstItem="BvL-ac-bQT" firstAttribute="leading" secondItem="hsa-FJ-L6F" secondAttribute="leading" constant="10" id="Lx0-pi-VvG"/>
+                                                <constraint firstAttribute="trailing" secondItem="0cI-Ac-7PE" secondAttribute="trailing" constant="10" id="WtF-Tl-vfY"/>
+                                                <constraint firstItem="3Pf-hN-asK" firstAttribute="leading" secondItem="zV9-Vc-UIh" secondAttribute="leading" id="gcE-HA-EjH"/>
+                                                <constraint firstItem="0cI-Ac-7PE" firstAttribute="centerY" secondItem="BvL-ac-bQT" secondAttribute="centerY" id="ra8-1Z-ITu"/>
+                                                <constraint firstItem="BvL-ac-bQT" firstAttribute="top" secondItem="hsa-FJ-L6F" secondAttribute="top" constant="8" id="vhk-hz-b0W"/>
+                                                <constraint firstItem="zV9-Vc-UIh" firstAttribute="leading" secondItem="hsa-FJ-L6F" secondAttribute="leading" constant="8" id="zAT-NG-5Nj"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="4" left="16" bottom="4" right="16"/>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstItem="BvL-ac-bQT" firstAttribute="leading" secondItem="gSR-fY-Ufq" secondAttribute="leadingMargin" id="2kM-gw-yCb"/>
-                                        <constraint firstItem="BvL-ac-bQT" firstAttribute="top" secondItem="gSR-fY-Ufq" secondAttribute="top" constant="11" id="8aW-jA-3ym"/>
-                                        <constraint firstItem="zV9-Vc-UIh" firstAttribute="top" secondItem="K4J-Xj-Cfh" secondAttribute="bottom" constant="40" id="EX6-Ys-fsW"/>
-                                        <constraint firstItem="zV9-Vc-UIh" firstAttribute="leading" secondItem="gSR-fY-Ufq" secondAttribute="leading" constant="16" id="Frs-XM-8Ia"/>
-                                        <constraint firstAttribute="bottom" secondItem="zV9-Vc-UIh" secondAttribute="bottom" constant="16" id="N24-Ax-RqN"/>
-                                        <constraint firstItem="K4J-Xj-Cfh" firstAttribute="leading" secondItem="BvL-ac-bQT" secondAttribute="leading" id="nRe-jC-XAN"/>
-                                        <constraint firstItem="K4J-Xj-Cfh" firstAttribute="top" secondItem="BvL-ac-bQT" secondAttribute="bottom" constant="3.5" id="vRW-gx-QR6"/>
-                                        <constraint firstAttribute="trailing" secondItem="zV9-Vc-UIh" secondAttribute="trailing" constant="16" id="zB1-Dm-wAN"/>
+                                        <constraint firstItem="hsa-FJ-L6F" firstAttribute="centerY" secondItem="gSR-fY-Ufq" secondAttribute="centerY" id="8sA-xR-WDI"/>
+                                        <constraint firstItem="hsa-FJ-L6F" firstAttribute="leading" secondItem="gSR-fY-Ufq" secondAttribute="leading" constant="16" id="Gx9-aK-VCl"/>
+                                        <constraint firstItem="hsa-FJ-L6F" firstAttribute="top" secondItem="gSR-fY-Ufq" secondAttribute="top" constant="4" id="UFW-sZ-5ac"/>
+                                        <constraint firstItem="hsa-FJ-L6F" firstAttribute="centerX" secondItem="gSR-fY-Ufq" secondAttribute="centerX" id="Z8O-BS-UX7"/>
+                                        <constraint firstAttribute="trailing" secondItem="hsa-FJ-L6F" secondAttribute="trailing" constant="16" id="lbE-Bz-uFs"/>
+                                        <constraint firstAttribute="bottom" secondItem="hsa-FJ-L6F" secondAttribute="bottom" constant="4" id="nfW-pG-QVU"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="dateLabel" destination="K4J-Xj-Cfh" id="t9r-h2-kkU"/>
+                                    <outlet property="containerView" destination="hsa-FJ-L6F" id="PGD-UV-8h0"/>
                                     <outlet property="progressSlider" destination="zV9-Vc-UIh" id="Z2W-dD-QBn"/>
-                                    <outlet property="titleLabel" destination="BvL-ac-bQT" id="vgs-fC-Ct9"/>
+                                    <outlet property="widgetSliderTitleLabel" destination="BvL-ac-bQT" id="8RB-eO-F4a"/>
+                                    <outlet property="widgetSliderTitleLabel_2" destination="Uoi-Xh-JZg" id="Dge-Mr-AEc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -193,15 +234,21 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XsE-IX-epx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="209"/>
+            <point key="canvasLocation" x="637.60000000000002" y="208.24587706146929"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="ubi4_back">
+            <color red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ubi4_gray">
+            <color red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ubi4_white">
+            <color red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

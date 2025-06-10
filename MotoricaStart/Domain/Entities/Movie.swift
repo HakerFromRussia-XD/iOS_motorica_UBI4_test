@@ -8,10 +8,10 @@ struct Movie: Equatable, Identifiable {
     }
     let id: Identifier
     let title: String?
+    let title_2: String?
     let genre: Genre?
     let posterPath: String?
     let overview: String?
-    let releaseDate: Date?
     let isAd: Bool
 }
 
